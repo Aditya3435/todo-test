@@ -8,7 +8,7 @@ export const TodoForm = () => {
 
   const handleAddTodo = () => {
     const new_todo = {
-      "id": todos.length,
+      "id": Math.floor(Math.random()*1000000),
       "label": `${task}`,
       "checked": false,
     }

@@ -7,11 +7,7 @@ export const TodoList = () => {
   const { todos, setTodos } = React.useContext(TodosContext);
 
   const handleDelete = (id) => {
-    const targetTask = todos.filter(todo => {
-      return todo.id === id;
-    });
-    const new_todos = [...todos];
-    new_todos.splice(targetTask, 1);
+    const new_todos = todos.filter(todo => todo.id !== id);
     setTodos(new_todos);
   };
 
